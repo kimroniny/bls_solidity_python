@@ -150,6 +150,10 @@ contract TestBLS {
         return BLS.isValidCompressedSignature(compressed);
     }
 
+    function isValidPublicKey(uint256[4] calldata pubkey) external view returns (bool) {
+        return BLS.isValidPublicKey(pubkey);
+    }
+
     function verifyHelpedAggregationPublicKeys(
         uint256[2] memory pubKeyG1,
         uint256[4] memory pubkey
